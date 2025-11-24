@@ -1,0 +1,9 @@
+# External endpoints that the enclave is allowed to access. 
+endpoints:
+  - api.weatherapi.com # replace with your own endpoints
+  - api.together.xyz
+  - huggingface.co
+  - walrus-mainnet-publisher.nami.cloud
+  - aggregator.walrus-mainnet.walrus.space
+  - kissyface.xyz
+  - www.kissyface.xyz
