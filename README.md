@@ -1,5 +1,8 @@
 # KissyFace.xyz
 
+- Try live now: https://www.kissyface.xyz (1 sui wallet gets 10 💋 to generate 1 image)
+- Demo video:https://www.youtube.com/watch?v=Eot2vNEIstM
+
 **KissyFace.xyz** 😘 represents the future of responsible and provable AI content generation ecosystem: transparent, fair, decentralized, and community-owned. 💋
 
 It makes LoRA image models on HuggingFace.co 🤗 easily accessible to end-users while rewarding the model creators.
@@ -38,6 +41,11 @@ FRONTEND_URL="https://www.kissyface.xyz"
 [run.sh](./src/nautilus-server/run.sh) can be used as it is as it has already been configured for allowed endpoints.
 
 ## Nautilus deployment proof
+
+The server has been run in an enclave and successfully served `process_data` request. We can show to judges upon requests.
+
+For demo, the server is deployed on Railway EC2.
+
 ```shell
 [ec2-user@ip-172-31-35-131 kissyface-xyz]$ cat out/nitro.pcrs
 db1e3213fda48ad590368b72dcc3e7791b345601b3e6d332926a1d73404da47303905c7fd5d02566e9f4283b5f4f4e1f PCR0
