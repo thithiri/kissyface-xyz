@@ -9,6 +9,21 @@ ENCLAVE_CID=$(nitro-cli describe-enclaves | jq -r ".[0].EnclaveCID")
 
 sleep 5
 # Secrets-block
+# Set your secrets here
+API_KEY="###"
+ADMIN_SECRET="###"
+FRONTEND_URL="https://www.kissyface.xyz"
+
+# Create secrets.json with all three secrets
+jq -n \
+  --arg api_key "$API_KEY" \
+  --arg admin_secret "$ADMIN_SECRET" \
+  --arg frontend_url "$FRONTEND_URL" \
+  '{
+    "API_KEY": $api_key,
+    "ADMIN_SECRET": $admin_secret,
+    "FRONTEND_URL": $frontend_url
+  }' > secrets.json
 # This section will be populated by configure_enclave.sh based on secret configuration
 
 cat secrets.json | socat - VSOCK-CONNECT:$ENCLAVE_CID:7777
